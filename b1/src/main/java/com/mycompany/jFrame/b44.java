@@ -56,8 +56,5 @@ public class b44 extends JFrame {
 		});
 		slider.setBounds(120, 30, 200, 26);
 		contentPane.add(slider);
-		
-		
-	
 	}
 }
