@@ -12,11 +12,17 @@
   <h2 class="text-center mb-4">Form Login</h2>
   
   <form class="row g-3">
-    <div class="col-md-6">
-      <label for="inputEmail" class="form-label">Email</label>
+    <div class="row">
+    <div class="col">
+    </div>
+    <div class="col-6">
+    <label for="inputEmail" class="form-label">Email</label>
       <input type="email" class="form-control" id="inputEmail" placeholder="example@email.com">
     </div>
-    <div class="col-md-6">
+      <div class="col">
+    </div>
+    </div>
+    <div class="col-12">
       <label for="inputPassword" class="form-label">Password</label>
       <input type="password" class="form-control" id="inputPassword">
     </div>
