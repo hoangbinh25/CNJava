@@ -16,16 +16,13 @@ public class CountServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String input = request.getParameter("inputString");
-        // Lưu chuỗi vào session (để Listener có thể theo dõi)
         HttpSession session = request.getSession();
         session.setAttribute("inputString", input);
 
-        // Đếm ký tự (loại bỏ null)
         int count = (input == null ? 0 : input.length());
         request.setAttribute("count", count);
         request.setAttribute("value", input);
 
-        // Forward về JSP để hiển thị
         RequestDispatcher rd = request.getRequestDispatcher("/count.jsp");
         rd.forward(request, response);
     }

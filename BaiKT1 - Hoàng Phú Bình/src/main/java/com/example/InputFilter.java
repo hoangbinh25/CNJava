@@ -13,7 +13,6 @@ public class InputFilter implements Filter {
         HttpServletRequest request = (HttpServletRequest) req;
         String input = request.getParameter("inputString");
         if (input == null || input.trim().isEmpty()) {
-            // Nếu rỗng, chuyển về form, có thể kèm thông báo
             request.setAttribute("error", "Vui lòng nhập chuỗi trước khi đếm.");
             request.getRequestDispatcher("/count.jsp").forward(request, res);
         } else {
